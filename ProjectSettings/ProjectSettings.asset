@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 860735dfc8f418749ab73a86dad3a315
+  productGUID: 444cf46ce8b9fd74d84a582620d2dacb
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: testPoderesUnity
+  productName: ProbandoCosas
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -838,14 +838,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: testPoderesUnity
+  metroPackageName: ProbandoCosas
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: testPoderesUnity
+  metroApplicationDescription: ProbandoCosas
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -916,10 +916,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 96868ff9-6809-4a64-9e3f-d797b7fcfd5d
+  cloudProjectId: 94cb3d2f-3839-4577-9ec1-275d8847b66a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: testPoderesUnity
+  projectName: ProbandoCosas
   organizationId: mrlegos4
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
