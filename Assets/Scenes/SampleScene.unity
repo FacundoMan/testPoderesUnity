@@ -337,10 +337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7395e84af40b448b223736ab9663d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetToRotate: {fileID: 1655867441}
-  lookInput: {fileID: 7164200446554726556, guid: 899d2f935a1ef4c4bb675784db84529f, type: 3}
-  rightClick: {fileID: 7164200446554726556, guid: 899d2f935a1ef4c4bb675784db84529f, type: 3}
-  rotationSpeed: 1.5
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +570,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 45eb7efec0c8f504285b382733758e52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -957,6 +953,8 @@ GameObject:
   - component: {fileID: 2017092928}
   - component: {fileID: 2017092927}
   - component: {fileID: 2017092926}
+  - component: {fileID: 2017092931}
+  - component: {fileID: 2017092930}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1053,6 +1051,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2017092930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017092925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d77304de3f07c2458842741b390a932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 36430121}
+  speed: 10
+--- !u!54 &2017092931
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017092925}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
