@@ -1065,6 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 36430121}
   speed: 10
+  minDistance: 2
 --- !u!54 &2017092931
 Rigidbody:
   m_ObjectHideFlags: 0
