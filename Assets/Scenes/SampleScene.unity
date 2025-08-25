@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 36430117}
   - component: {fileID: 36430123}
   - component: {fileID: 36430122}
+  - component: {fileID: 36430124}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -272,8 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e91a44d47f11694ebc16163f8b2e4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upForce: 5
-  force: 10
+  upForce: 10
+  force: 12
 --- !u!114 &36430123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 899d2f935a1ef4c4bb675784db84529f, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -319,11 +320,27 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e4098661-37dc-4e8a-a37e-0b824ca1bd47
     m_ActionName: 'Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c21d3d45-70ec-4ec0-9670-dcce770706df
+    m_ActionName: 'Player/Look[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &36430124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36430116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66926133900dfc24090144ae8c3cb24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &126630930
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,8 +582,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3826835, y: -0.0000000125343265, z: 0.000000005191889, w: 0.92387956}
-  m_LocalPosition: {x: 0.71428, y: 21.5, z: -19.28572}
+  m_LocalRotation: {x: 0.33100694, y: -0.000000010018752, z: 0.000000003514388, w: 0.9436283}
+  m_LocalPosition: {x: 0.71428, y: 21.5, z: -24.28572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -943,7 +960,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 20, z: -20}
+  FollowOffset: {x: 0, y: 20, z: -25}
 --- !u!114 &539528535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,8 +1012,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539528532}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268346, y: -0.000000012534321, z: 0.0000000051918785, w: 0.92387956}
-  m_LocalPosition: {x: 0.71428, y: 21.5, z: -19.28572}
+  m_LocalRotation: {x: 0.3310069, y: -0.000000010018748, z: 0.0000000035143812, w: 0.9436284}
+  m_LocalPosition: {x: 0.71428, y: 21.5, z: -24.28572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1439,7 +1456,7 @@ MonoBehaviour:
   - {fileID: 642920739}
   waitTime: 3
   cooldownFollow: 4
-  radiusSearch: 5
+  radiusSearch: 30
   maxHealth: 100
   currentHealth: 40
   currentSate: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,11 +13,33 @@ public class PlayerScript : MonoBehaviour
     private Vector2 input;
      private bool canJump = true;
 
-    void Start()
+       private void OnEnable()
+       
     {
-        Debug.Log("Script activo");
+        InputReader.Instance.OnJump += HandleJump;
+        InputReader.Instance.OnMove += HandleMove;
+    }
+
+    private void OnDisable()
+    {
+        InputReader.Instance.OnMove -= HandleMove;
+        InputReader.Instance.OnJump -= HandleJump;
+    }
+
+    private void HandleMove(Vector2 vector)
+    {
+         Vector3 vel = new Vector3(input.x, 0f, input.y) * force;
+         rb.linearVelocity = new Vector3(vel.x,rb.linearVelocity.y,vel.z);
+    }
+    void Awake()
+    {
         rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
+    }
+
+    void Start()
+    {
+        
     }
     void Update()
     {
@@ -25,11 +48,12 @@ public class PlayerScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.AddForce(new Vector3(input.x, 0f, input.y) * force);
     }
-    public void Jump(InputAction.CallbackContext context)
+
+    
+    public void HandleJump()
     {
-        if (context.performed && canJump)
+        if (canJump)
         {
 
             rb.AddForce(Vector3.up * upForce, ForceMode.Impulse);

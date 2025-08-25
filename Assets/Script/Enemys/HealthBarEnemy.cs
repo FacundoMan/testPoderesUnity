@@ -39,7 +39,7 @@ public class HealthBarEnemy : MonoBehaviour
         // convertir posición del mundo a pantalla
         Vector3 screenPos = Camera.main.WorldToScreenPoint(target.position + offset);
         transform.position = screenPos;
-        Debug.Log(transform.position);
+     
     }
 
     public void SetHealth(float value)
