@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+using UnityEngine;
+
+public class BossController : MonoBehaviour
+{
+
+    [SerializeField] private GameObject player;
+    [SerializeField] private Boolean IsPilonActive;
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        StartCoroutine(instanciarPilonTest());
+    }
+
+    IEnumerator instanciarPilonTest()
+    {
+        IsPilonActive = true;
+        if (!IsPilonActive)
+        {
+        yield return new WaitForSeconds(3f);
+        GameObject pilon = PilonPool.Instance.RequestPilon();
+        pilon.transform.position = player.transform.position;
+        }
+        IsPilonActive = false;
+    }
+}

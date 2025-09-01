@@ -12,6 +12,11 @@ public class Pilon : MonoBehaviour
     [SerializeField] private int velFin;
     private void Start()
     {
+        
+    }
+
+    private void Onable()
+    {
         velFin = UnityEngine.Random.Range(velMin, velMax + 1);
         pilarRb.linearVelocity = Vector3.up * velFin;
         StartCoroutine(destruir());
