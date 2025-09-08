@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "Orbit",
+    "maps": [
+        {
+            "name": "OrbitCamera",
+            "id": "35bf8ba7-d94c-47e3-80ec-5f9d323a84cc",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "7431ff41-3ab5-496e-a9ca-09740821ba2f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "One Modifier",
+                    "id": "42acff2c-9ee7-4d6e-86ef-9c5424f125d0",
+                    "path": "OneModifier",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "594f3e55-d712-4a5a-b5c7-cc47edf14180",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "48692259-b657-4c70-a77f-e204a7cf2cb4",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

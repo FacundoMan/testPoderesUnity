@@ -3,18 +3,22 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerScript : MonoBehaviour
 {
 
 
-    public float upForce = 5f, force = 5f;
-    private Rigidbody rb;
-    private PlayerInput playerInput;
-    private Vector2 input;
-     private bool canJump = true;
+    [Header("Movement")]
+    [SerializeField] private float moveSpeed = 5f;   // antes 'force'
+    [SerializeField] private Transform camTransform; // arrastra MainCamera
 
-       private void OnEnable()
-       
+    [Header("Jump")]
+    [SerializeField] private float upForce = 5f;
+    private Rigidbody rb;
+    private bool canJump = true;
+
+    private void OnEnable()
+
     {
         InputReader.Instance.OnJump += HandleJump;
         InputReader.Instance.OnMove += HandleMove;
@@ -26,31 +30,47 @@ public class PlayerScript : MonoBehaviour
         InputReader.Instance.OnJump -= HandleJump;
     }
 
-    private void HandleMove(Vector2 vector)
+    private void HandleMove(Vector2 input)
     {
-         Vector3 vel = new Vector3(input.x, 0f, input.y) * force;
-         rb.linearVelocity = new Vector3(vel.x,rb.linearVelocity.y,vel.z);
+        // direcciones planas de la cámara
+        Vector3 camForward = camTransform.forward;
+        Vector3 camRight   = camTransform.right;
+        camForward.y = 0f;
+        camRight.y   = 0f;
+        camForward.Normalize();
+        camRight.Normalize();
+
+        // vector deseado en espacio mundo
+        Vector3 desired = camForward * input.y + camRight * input.x;
+        desired *= moveSpeed;
+
+        // velocidad constante (sin aceleración)
+        rb.linearVelocity = new Vector3(desired.x, rb.linearVelocity.y, desired.z);
+
+        // rotación visual hacia donde camina
+        if (desired != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(desired);
     }
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        playerInput = GetComponent<PlayerInput>();
+        if (!camTransform) camTransform = Camera.main.transform;
     }
 
     void Start()
     {
-        
+
     }
     void Update()
     {
-        input = playerInput.actions["Movement"].ReadValue<Vector2>();
+        
 
     }
     void FixedUpdate()
     {
     }
 
-    
+
     public void HandleJump()
     {
         if (canJump)
@@ -60,7 +80,7 @@ public class PlayerScript : MonoBehaviour
             StartCoroutine(JumpCooldown()); //Cooldown jump
         }
     }
-    
+
     private IEnumerator JumpCooldown()
     {
         canJump = false;
