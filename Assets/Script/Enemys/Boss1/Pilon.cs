@@ -15,7 +15,7 @@ public class Pilon : MonoBehaviour
         
     }
 
-    private void Onable()
+    private void OnEnable()
     {
         velFin = UnityEngine.Random.Range(velMin, velMax + 1);
         pilarRb.linearVelocity = Vector3.up * velFin;

@@ -9,7 +9,7 @@ public class BossController : MonoBehaviour
     [SerializeField] private Boolean IsPilonActive;
     void Start()
     {
-
+        IsPilonActive = false;
     }
 
     // Update is called once per frame
@@ -20,13 +20,14 @@ public class BossController : MonoBehaviour
 
     IEnumerator instanciarPilonTest()
     {
-        IsPilonActive = true;
+        
         if (!IsPilonActive)
-        {
-        yield return new WaitForSeconds(3f);
-        GameObject pilon = PilonPool.Instance.RequestPilon();
-        pilon.transform.position = player.transform.position;
+        {   IsPilonActive = true;
+            yield return new WaitForSeconds(3f);
+            GameObject pilon = PilonPool.Instance.RequestPilon();
+            pilon.transform.position = player.transform.position;
+            IsPilonActive = false;
         }
-        IsPilonActive = false;
+        
     }
 }

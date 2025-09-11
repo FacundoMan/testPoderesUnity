@@ -665,6 +665,53 @@ Transform:
   - {fileID: 1931700997}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &339946603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339946605}
+  - component: {fileID: 339946604}
+  m_Layer: 0
+  m_Name: PilonPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &339946604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339946603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f174a8efa98fb429ead140a2a11a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pilonPref: {fileID: 4778696241426409874, guid: c7910fcc6adde3b4ea3829be9c3f15e5, type: 3}
+  poolSize: 4
+  pilonList: []
+--- !u!4 &339946605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339946603}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.43584, y: 12.24968, z: 30.0946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &530377452
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,9 +985,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 853201274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f378fa125f0a86644a1494767c018bf4, type: 3}
+  m_Script: {fileID: 11500000, guid: 552a7531da5a3f54f9b26c592c956c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 319311932}
+  IsPilonActive: 0
 --- !u!1 &955295878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,3 +1502,4 @@ SceneRoots:
   - {fileID: 853201278}
   - {fileID: 123989632}
   - {fileID: 955295884}
+  - {fileID: 339946605}

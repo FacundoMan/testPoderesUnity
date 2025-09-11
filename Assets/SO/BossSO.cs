@@ -21,9 +21,7 @@ public class BossSO : ScriptableObject
     public int Damage { get { return damage; } }
     public List<ScriptableObject> Loot { get { return loot; } }
     public List<ScriptableObject> Ability { get { return ability; } }
-
     public int MaxHealth { get { return maxHealth; } }
-    
     public string Description{get{ return description; }}
     
 
