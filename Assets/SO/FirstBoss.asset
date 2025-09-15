@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FirstBoss
   m_EditorClassIdentifier: 
   nameBoss: FirstBoss
-  element: 3
+  element: 2
   damage: 10
   loot: []
   ability: []
