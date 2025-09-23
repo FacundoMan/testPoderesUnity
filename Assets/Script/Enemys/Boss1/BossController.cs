@@ -8,7 +8,6 @@ public class BossController : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private Boolean IsPilonActive;
-
     [SerializeField] private BossSO bossSO;
 
     private int currentHealth;

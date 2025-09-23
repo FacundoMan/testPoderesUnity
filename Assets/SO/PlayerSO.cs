@@ -49,15 +49,10 @@ public class PlayerSO : ScriptableObject
     [SerializeField] private float moveSpeed;
     public float MoveSpeed => moveSpeed;
 
-    [SerializeField] private float rotationSpeed;
-    public float RotationSpeed => rotationSpeed;
-
     [Header("Resources")]
     [SerializeField] private int maxMana;
     public int MaxMana => maxMana;
 
-    [SerializeField] private int maxStamina;
-    public int MaxStamina => maxStamina;
 
     
 }
