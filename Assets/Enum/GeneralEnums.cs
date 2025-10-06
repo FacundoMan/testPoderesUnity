@@ -10,3 +10,10 @@ public enum EnumElementry
     LIGHT,
     DARKNESS
 }
+
+public enum EnumAbilityState
+{
+    READY,
+    ACTIVE,
+    COOLDOWN
+}

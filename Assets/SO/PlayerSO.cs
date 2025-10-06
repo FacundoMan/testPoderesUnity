@@ -2,7 +2,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerSO", menuName = "Player Data")]
 public class PlayerSO : ScriptableObject
 {
-[Header("Identity")]
+    [Header("Identity")]
     [SerializeField] private string characterName;
     public string CharacterName => characterName;
 
